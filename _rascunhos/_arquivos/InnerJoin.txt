@@ -1,0 +1,73 @@
+ $sql2 = "SELECT * FROM pessoa
+                             INNER JOIN endereco ON endereco.Pessoa_codigoPessoa = pessoa.codigoPessoa 
+                             INNER JOIN contactos ON contactos.Pessoa_codigoPessoa = pessoa.codigoPessoa 
+                             INNER JOIN banco ON banco.Pessoa_codigoPessoa = pessoa.codigoPessoa 
+                             INNER JOIN cartaobanco ON cartaobanco.Pessoa_codigoPessoa = pessoa.codigoPessoa WHERE codigoPessoa = '$codigoPessoa'";
+        
+        try
+        {
+            $consulta = $conexaoPDO -> prepare($sql2);
+            $consulta -> execute(Array('codigoPessoa' => $codigoPessoa));
+            $resultado = $consulta -> fetchAll(PDO::FETCH_NUM);
+        }
+        catch(PDOException $e) 
+        {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+        $i = 0;
+        foreach($resultado as $valores)
+        {
+            echo " <fieldset id='fiel-contacto'>";
+            echo "Codigo Pessoa: '$valores[0]'.<br>"; 
+            echo "Nome: '$valores[1]'.<br>"; 
+            echo "Data de nascimento: '$valores[2]'.<br>"; 
+            echo "Identificação - '$valores[3]'.<br>"; 
+            echo "Senha Informação - '$valores[4]'.<br>"; 
+            echo "</fieldset>";
+
+            echo " <fieldset id='fiel-contacto'>";
+            echo "Codigo Endereco: '$valores[5]'.<br>"; 
+            echo "Codigo Pessoa: '$valores[6]'.<br>";
+            #echo "Codigo Fornecedor: '$valores[7]'.<br>";
+            echo "Provincia: '$valores[8]'.<br>"; 
+            echo "Municipio: '$valores[9]'.<br>"; 
+            echo "Bairro: '$valores[10]'.<br>"; 
+            echo "Rua: '$valores[11]'.<br>"; 
+            echo "Numero de Casa: '$valores[12]'.<br>"; 
+            echo "</fieldset>";
+
+            echo " <fieldset id='fiel-contacto'>";
+            echo "Codigo Contacto: '$valores[13]'.<br>"; 
+            echo "Codigo Pessoa: '$valores[14]'.<br>"; 
+            #echo "Codigo Fornecedor: '$valores[15]'.<br>";
+            echo "Telefone1: '$valores[16]'.<br>"; 
+            echo "Telefone2: '$valores[17]'.<br>"; 
+            echo "Email: '$valores[18]'.<br>"; 
+            echo "</fieldset>";
+
+            echo " <fieldset id='fiel-contacto'>";
+            echo "Codigo do Banco: '$valores[19]'.<br>"; 
+            echo "Codigo Pessoa: '$valores[20]'.<br>";
+            echo "Nome do Banco: '$valores[21]'.<br>";
+            echo "Cartão de Contribuente: '$valores[22]'.<br>";
+            echo "Salario: '$valores[23]'.<br>";
+            echo "Valor de Abertura na Conta: '$valores[24]'.<br>";
+            echo "PIN: '$valores[25]'.<br>";
+            echo "</fieldset>";
+
+            echo " <fieldset id='fiel-contacto'>";
+            echo "Codigo de Cartão Banco: '$valores[26]'.<br>";
+            echo "Codigo Pessoa: '$valores[27]'.<br>";
+            echo "IBAN: '$valores[29]'.<br>";
+            echo "Numero de Conta: '$valores[30]'.<br>";
+            echo "Valor na conta: '$valores[31]'.<br>";
+            echo "Numero de Conta Electronica: '$valores[32]'.<br>";
+            echo "PIN: '$valores[33]'.<br>";
+            echo "Estado: '$valores[34]'.<br>";
+            echo "</fieldset>";
+
+            
+
+            $i++;  
+        }
