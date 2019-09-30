@@ -11,8 +11,7 @@
 
     session_start();
     include_once("coneccao.php"); 
-     
-
+    
     $senha1 = criptografar(isset($_POST['senha1']) ? $_POST['senha1']:0);
     $senha2 = criptografar(isset($_POST['senha2']) ? $_POST['senha2']:0);
     $pinDigitado = isset($_POST['pin']) ? $_POST['pin']:0;

@@ -1,0 +1,149 @@
+/*
+    Autor: Emanuel Cândido
+*/
+
+*{
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+
+body, html
+{
+    height: 100%;
+    font-family: Poppins-Regular, sans-serif;
+	background-size: cover;
+	border-radius: 7px;
+	color: #000;
+	font-family: Montserrat;
+}
+
+form#login
+{
+    background-color: #F7F7F7;
+    width: 560px;
+    min-height: 100vh;
+    display: block;
+    padding: 173px 55px 55px 55px;
+}
+
+.tituloDoLogin
+{
+    width: 100%;
+    display: block;
+    font-family: Poppins-Regular;
+    font-size: 30px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.limites
+{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.caixaDaElisal
+{
+    width: 100%;  
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+}
+
+.caixaDaElisal2
+{
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-direction: row-reverse;
+}
+
+.imagemDeLado
+{
+    background-image: url('../_galeria/_imagens/_principais/principal1.jpg');
+    width: calc(100% - 560px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+  
+.imagemDeLado::before 
+{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.1);
+}
+
+.mesmaClass 
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    color: #292929;
+    font-size: 18px;
+    background-color: #E9E9E9;
+    border: 1px solid #E9E9E9;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    height: 50px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    text-indent: 20px;
+    display: block;
+    width: 100%;
+}
+
+#idEnviar
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background: #22A5F1;
+
+    font-family: Montserrat-Bold;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s;
+}
+
+#idEnviar:hover
+{
+    background: black;
+}
+
+

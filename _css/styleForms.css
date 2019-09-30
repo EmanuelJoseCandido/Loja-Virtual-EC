@@ -1,0 +1,79 @@
+body
+{
+    background-image: url('../_galeria/_imagens/_principais/principal1.jpg') no-repeat center fixed;
+	background-size: cover;
+}
+
+form
+{
+     width: 100%;
+     font-family: "Arial", Times, serif;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     margin-top: 30px;
+     padding: 20px;
+}
+
+#login-criar-conta input
+{
+    background-color: white;
+    color: black;
+}
+
+input
+{
+    width: 100%;
+    color: #292929;
+    font-size: 18px;
+    background-color: #E9E9E9;
+    border: 1px solid #E9E9E9;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    text-indent: 20px;
+}
+
+.esquerda
+{
+    float: left;
+
+}
+
+.tituloDoFieldset
+{
+    width: 100%;
+    display: block;
+    font-family: "Arial", Times, serif;
+    font-size: 25px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+}
+
+#idEnviar
+{
+   color: #1D2A38; 
+}
+
+footer
+{
+    margin-top: 40px;
+    font-family: "Arial", Times, serif;
+    text-align: center;
+    padding: 10px;
+    background-color: #1D2A38;
+    color: #f1f1f1;
+}
+
+footer a
+{
+    text-decoration: none;
+    color: #27AE60;
+    font-weight: 700;
+}
