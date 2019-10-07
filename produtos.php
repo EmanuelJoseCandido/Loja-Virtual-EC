@@ -6,7 +6,7 @@
 
     if(!empty($_SESSION['nomeUsuario']))
     {
-        echo "Ola Sr(a) ". $_SESSION['nomeUsuario']. " - ".$_SESSION['codigoPessoa'];
+        echo $_SESSION['nivel']." -- (". $_SESSION['nomeUsuario']. ") - ".$_SESSION['codigoPessoa'] ;
         echo '<a href="sairLvEc.php">Sair</a>';
     }
     else
@@ -17,13 +17,12 @@
 
 ?>
 
-
 <!DOCTYPE html>
 	<html>
 		<head>
 			<meta charset="UTF-8">
 			<title>Produtos</title>
-			<link rel="stylesheet" type="text/css" href="_css/stylePrincipal.css"/>
+			<link rel="stylesheet" type="text/css" href="_css/stylePrincipa.css"/><!--_css/stylePrincipal.css: correcto--> 
 		</head>
 		
 		<body>
@@ -31,7 +30,7 @@
 				<header>
 					<a href="index.php"><img src="_galeria/_imagens/logotipo.png"></a>
 					<nav id="menu">
-						<h2>Menu Principal</h2>
+                        <h2>Menu Principal</h2>
 						<ul>
 							<li><a href="index.php">Casa |</a></li>
 							<li><a href="historial.php">Historial |</a></li>
@@ -41,10 +40,11 @@
 						</ul>
 					</nav>
                 </header>
-                
+               
                 <?php
         
-                    $sql1 = "SELECT * FROM usuario";
+                    include_once("coneccao.php");
+                    $sql1 = "SELECT * FROM produtos";
         
                     try
                     {
@@ -56,17 +56,29 @@
                     {
                         echo 'Error: ' . $e->getMessage();
                     }
-                
                     foreach($resultado as $valores)
                     {
-                        echo 'Nome do Produto: '.$valores[2];
+                        echo "
+                        <div id='mostarProdutos'>
+                                <fieldset id='fiel-contacto'>
+                                    <h2>$valores[2]</h2>
+                                    <img src='_galeria/_imagens/_produtos_cadastrados/$valores[8]' alt='produtos_$valores[0]' class='imagens-produtos'>
+                                    <br>Imagem: $valores[8]
+                                    <br>Valor: $valores[6]
+                                    <p>
+                                        <a href='validarCompra.php?codigoProdutos=$valores[0]' value='Comprar'>Comprar</a>
+                                    </p> 
+                                    <br><br><br><br><br>
+                                </fieldset>
+                        </div>";
                     }
         
                 ?>
 				
+
 				
 				<footer id="rodape">
-					<p>Todos os direitos reservados <br> Copyright &copy; 2018 - by <a href="autor.php">Emanuel Cândido</a></p>
+					<p>Todos os direitos reservados <br> Copyright &copy; 2019 - by <a href="autor.php">Emanuel Cândido</a></p>
 				</footer>
 			</div>	
 		</body>		

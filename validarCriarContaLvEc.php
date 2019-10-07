@@ -156,17 +156,17 @@
 
                             <p>
                                 <label for='idValorNaConta'>Valor na conta: </label><br>
-                                <input type='text' name='valorNaConta' id='idValorNaConta' size='50' value='$valores[31]' disabled='disabled'> 
+                                <input type='text' name='valorNaConta' id='idValorNaConta' size='50' value='$valores[32]' disabled='disabled'> 
                             </p>
 
                             <p>
                                 <label for='idNumeroDeContaElectronica'>Numero de Conta Electronica: </label><br>
-                                <input type='text' name='NumeroDeContaElectronica' id='idNumeroDeContaElectronica' size='50' value='$valores[32]' disabled='disabled'> 
+                                <input type='text' name='NumeroDeContaElectronica' id='idNumeroDeContaElectronica' size='50' value='$valores[33]' disabled='disabled'> 
                             </p>
 
                             <p>
                                 <label for='idEstado'>Estado: </label><br>
-                                <input type='text' name='estado' id='idEstado' size='50' value='$valores[34]' disabled='disabled'> 
+                                <input type='text' name='estado' id='idEstado' size='50' value='$valores[35]' disabled='disabled'> 
                             </p>
                         </fieldset>
                     </form>
@@ -211,10 +211,13 @@
             
            $_SESSION['nome'] =  $valores[1];
            $_SESSION['Pessoa_codigoPessoa'] =  $valores[14];
-           $_SESSION['pinSistema'] =  $valores[33];
+           $_SESSION['pinSistema'] =  $valores[34];
 
         }
-
+    }
+    else
+    {
+        
     }
     
 

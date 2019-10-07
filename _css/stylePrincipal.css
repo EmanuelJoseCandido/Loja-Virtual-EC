@@ -1,0 +1,308 @@
+html, body
+{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root
+{
+   /* Temas das cores do Emaboy */
+   --texto-azul: #3f4954;
+   --texto-leve: #686666da;
+   --cor-do-fundo: #0f0f0f;
+   --branco: #ffffff;
+   --meia-noite: #104f55;  
+
+   /*Cores Gradiente*/
+   --cor-do-ceu: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+/*Classes Globais*/
+
+a
+{
+    text-decoration: none;
+    color: var(--texto-azul);
+}
+
+.linha
+{
+    display: flex;
+    flex-direction: row;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+h1
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+}
+
+h3
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3rem;
+}
+
+h2
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+span
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button.botao
+{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+}
+
+
+/*Início Navegaçaõ*/
+
+.nav
+{
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+}
+
+.nav .outradiv
+{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.nav .outradiv .outradiv-icones
+{
+    display: flex;
+    justify-content: flex-end;
+    padding:  1.7rem 0;
+}
+
+.nav .outradiv .outradiv-icones i
+{
+    font-size: 1.4rem;
+    color:  var(--texto-azul);
+}
+.nav .itens-navegacao 
+{ 
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-menu
+{ 
+    justify-content: space-between;
+}
+
+.nav .itens-navegacao .link-navegacao
+{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.nav .itens-navegacao .link-navegacao:hover 
+{
+    background-color: var(--meia-noite);
+}
+
+.nav .itens-navegacao .link-navegacao:hover a
+{
+    color: var(--branco);
+}
+
+.nav .nav-logotipo a
+{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-size: 1.6rem;
+
+}
+
+.nav .redes-sociais
+{
+    padding: 1.4rem 0; 
+}
+
+.nav .redes-sociais i
+{
+    padding: 0 .2rem;
+}
+
+.nav .redes-sociais i:hover
+{
+    color: #a1c4cf;
+}
+
+/* Parte princípal da section */
+
+/* Titulo do Site */
+
+main .site-titulo
+{
+    background: url("../_galeria/_imagens/_principais/principal4.jpg");
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-titulo .site-cor-do-fundo
+{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--branco);
+}
+
+main .site-titulo h1,h3
+{
+    margin: .3rem;
+}
+
+main .site-titulo .botao
+{
+    margin: 1.5rem;
+    background: var(--cor-do-ceu);
+}
+
+main .site-titulo .botao:hover
+{
+    background: transparent;
+    border-radius: 1px solid var(--branco);
+    color: var(--branco);
+}
+
+/* Titulo do Site */
+
+
+/* Produtos em Destaque */
+
+main .produtos
+{
+    background: url() no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 90%;
+}
+
+main .produtos .produto-em-destaque
+{
+    /* padding-top: 6rem; */
+  
+}
+
+main .produtos .produto-em-destaque div
+{
+    /* padding-top: 6rem; */
+    display: inline-block;
+}
+
+main .produto-em-destaque .destaques-conteudo
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 25%;
+    margin: 3rem 3rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 2);
+}
+
+main .destaques-conteudo .titulo-do-produto
+{
+    padding: 2rem 0;
+}
+
+main .destaques-conteudo .botao-do-produto
+{
+    padding: .7rem 2rem;
+    background: var(--cor-do-ceu);
+    margin: .5rem;
+}
+
+main .destaques-conteudo span
+{
+    display: block;
+}
+
+main .destaques-conteudo img
+{
+    height: 300px;
+    width: 300px;
+}
+
+/* Produtos em Destaque */
+
+.mensagem
+{
+    padding-top: 3rem;
+}
+
+/* Parte princípal da section */
+
+
+
+/* Rodape */
+
+footer.rodape
+{
+    height: 100%;
+    background: var(--cor-do-fundo);
+    position: relative;
+}
+
+footer.rodape .repiciente
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer.rodape .repiciente
+{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+
+/* Rodape */
+
+
+
+/*Fim Navegaçaõ*/
+
+/*Inicio Vizualização menor ou igual 750px*/
+
+@media only screen and(max-width: 750px)
+{
+    .nav .nav-menu, .nav .link-navegacao
+    {
+        flex-direction: column;
+    }
+
+    .nav .outradiv
+    {
+        display: initial;
+    }
+}
+
+/*Fim Vizualização menor ou igual 750px*/

@@ -16,12 +16,13 @@ $_SESSION['codigoPessoa'];
 
         
     ?>
-    <form action="validarCadastroLvEc.php" method="post">
+    <form action="amazenarProdutos.php" method="post" enctype="multipart/form-data">
         <fieldset>
             <p>
                 <label for='idProduto'>Nome do Produto: </label><br>
-                <input type='text' name='produto' id='idProduto' size='50' placeholder='Digite o seu usuário...'> 
+                <input type='text' name='nomeProduto' id='idProduto' size='50' placeholder='Digite o seu usuário...'> 
             </p>
+            
 
             <p>
                 <label for="idQuantidadeDisponivel">Quantidade Disponível<span class="asteristico">*</span>: </label><br>
@@ -39,7 +40,12 @@ $_SESSION['codigoPessoa'];
             </p>
 
             <p>
-                <input type="submit" name="entrar" id="idEnviar" value="Entrar">
+                <label for="idImgProdutos">Imagem<span class="asteristico">*</span>: </label><br>
+                <input type="file" name="imgProdutos" id="idImgProdutos">
+            </p>
+
+            <p>
+                <input type="submit" name="armazenarProdutos" id="idArmazenarProdutos" value="Armazenar Produtos">
             </p>
         </fieldset>
     </form>

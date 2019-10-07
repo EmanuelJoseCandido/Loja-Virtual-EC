@@ -32,7 +32,7 @@
                 ':cargo' => $cargo, 
             ));
 
-            $Cliente_codigoCliente = $conexaoPDO->lastInsertId();
+            $Funcionario_codigoFuncionario = $conexaoPDO->lastInsertId();
             $palavraChave = $senha1;
             $situacao = "Activo(a)";
             $nivel = isset($_POST['nivel']) ? $_POST['nivel']:0;
@@ -46,11 +46,11 @@
             $usuario = isset($_POST['usuario']) ? $_POST['usuario']:0;
             // Codigo de inserção de informação na tabela usuario
             #Depois devo trocar o formato da data e hora de cadastro na base de dedos.
-            $sql2 = 'INSERT INTO usuario(Pessoa_codigoPessoa, Cliente_codigoCliente, usuario, palavraChave, situacao, nivel, dataDeCadastro) VALUES (:Pessoa_codigoPessoa, :Cliente_codigoCliente, :usuario, :palavraChave, :situacao, :nivel, :dataDeCadastro)';
+            $sql2 = 'INSERT INTO usuario(Pessoa_codigoPessoa, Funcionario_codigoFuncionario, usuario, palavraChave, situacao, nivel, dataDeCadastro) VALUES (:Pessoa_codigoPessoa, :Funcionario_codigoFuncionario, :usuario, :palavraChave, :situacao, :nivel, :dataDeCadastro)';
             $stmt2 = $conexaoPDO -> prepare($sql2);
             $stmt2 -> execute(array(
                 ':Pessoa_codigoPessoa' => $Pessoa_codigoPessoa,
-                ':Cliente_codigoCliente' => $Cliente_codigoCliente,
+                ':Funcionario_codigoFuncionario' => $Funcionario_codigoFuncionario,
                 ':usuario' => $usuario,
                 ':palavraChave' => $palavraChave, 
                 ':situacao' => $situacao,

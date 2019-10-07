@@ -15,7 +15,7 @@
         {
             $sql1 = "SELECT * FROM usuario WHERE usuario = '$usuario'";
             
-           
+            //CodigoFuncionario
             try
             {
                 $consulta = $conexaoPDO -> prepare($sql1);

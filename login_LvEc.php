@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php include_once("funcoes.php"); session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

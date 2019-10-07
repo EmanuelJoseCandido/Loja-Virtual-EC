@@ -1,0 +1,510 @@
+/*Estilização Global*/
+
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    box-sizing: border-box;   
+}
+
+a
+{
+    text-decoration: none;
+}
+
+ul
+{
+    list-style: none;
+}
+
+p
+{
+    font-size: 1.6rem;
+}
+
+#imgLogo
+{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+section
+{
+    padding: 5rem 0;
+}
+
+/*Cabecalho*/
+header
+{
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+
+.recipiente
+{
+    width: 100%;
+    max-width: 98rem;
+    margin: 0 auto;
+    padding:  0 1.5rem;
+}
+
+nav
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.nav-logotipo
+{
+    width: 2rem;
+}
+
+.menu-icones img
+{
+    font-size: 3.5rem;
+    color: #fafafa;
+    cursor: pointer;
+}
+
+.fechar img
+{
+    color:#eb648c; 
+}
+
+.lista-nav
+{
+    width: 25rem;
+    height: 100vh;
+    background-color: #d7d4ed;
+    position: fixed;
+    top: 0;
+    right: -26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    transition:  all 650ms ease-in-out;
+}
+
+.lista-nav.activar
+{
+    right: 0;
+}
+
+.fechar{
+    position: absolute;
+    top: 1rem;
+    left: 0.1rem;
+}
+
+.itens-nav
+{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .7);
+    text-align: center;
+}
+
+.itens-nav
+{
+    margin: 1.5rem 0;
+}
+
+.link-nav
+{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .7);
+}
+
+.nome-usuario
+{
+    font-size: 12pt;
+
+}
+
+.hero
+{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(226, 53, 0, 0.9) 0%, rgba(255, 95, 0, 0.8) 100%), url("../_galeria/_imagens/_principais/principal4.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 4.7rem;
+    background: url("../_galeria/_imagens/_principais/principal1.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.mensagem-principal
+{
+    width: 100%;
+    max-width: 50rem;
+    color: #fafafa;
+    text-transform: uppercase;
+    transform:  translateY(20%);
+}
+
+.mensagem-principal h3
+{
+    font-size: 1.6rem;
+}
+
+.mensagem-principal h1
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.mensagem-principal p
+{
+    text-transform: lowercase;
+}
+
+.botao
+{
+    background-color: #eb648c;
+    border-radius: 2rem;
+    color: #fafafa;
+    display: inline-block;
+    margin-top: 2rem;
+    padding:  1rem 2.5rem;
+    text-transform: uppercase;
+    transition: background-color 650ms;
+}
+
+.botao:hover
+{
+    background-color: #ce587b;
+}
+
+/*Procurando fora de portas*/
+
+.exeperiencia-fora
+{
+    padding: 0;
+}
+
+.titulo-cabecalho
+{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10rem;
+    color: rgba(0, 0, 0, .7);
+}
+
+.titulo-cabecalho h3
+{
+    font-size: 1.4rem;
+
+}
+
+.titulo-cabecalho h1
+{
+    font-size: 2rem;
+    margin-bottom: .5rem 0 1rem;
+}
+
+.titulo-cabecalho p
+{
+    text-transform: uppercase;
+    
+}
+
+.actividades-grelha
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, lfr));
+    grid-gap: 2.5rem;    
+}
+
+.actividades-grelha-itens
+{
+    height: 40rem;
+    padding: 5rem;
+    color: #fafafa; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.actividades-grelha-itens::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(226, 53, 0, 0.9) 0%, rgba(255, 95, 0, 0.8) 100%);
+    z-index: -1;
+}
+
+
+.actividades-grelha-itens img
+{
+    margin-left: -5px;
+    width: 8%;
+    height: 20%;
+}
+
+/* testemunhos */
+
+.testemunhos
+{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(226, 53, 0, 0.9) 0%, rgba(255, 95, 0, 0.8) 100%), url("../_galeria/_imagens/_principais/principal4.jpg") center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.testemunhos::before
+{
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 100%;
+    height: 4.7rem;
+    background: url("") center no-repeat;
+    background-size: cover;
+}
+
+.testemunho
+{
+    width: 100%;
+    color: #fafafa;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.testemunho-texto-quadrado
+{
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.testemunho-texto-quadrado img
+{
+    position: absolute;
+    top: -8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    color: #ce587b;
+    opacity: .5;
+    z-index: -1; 
+}
+
+.alterar-testemunho img
+{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    border: 3px solid #ce587b; 
+}
+
+/* Começando Aventura */
+
+.grelha-aventura
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, lfr));
+    grid-gap: 2.5rem;    
+    margin-bottom: 2rem;
+}
+
+.grelha-aventura-itens p 
+{
+    color: rgba(0, 0, 0, .7);
+}
+
+footer
+{
+    padding:  2.5rem 0;
+    background-color: #d7d4ed;
+    text-align: center;
+    color: rgba(0, 0, 0, .7);
+}
+
+/* Media Queries */
+
+@media screnn and (min-width: 350px)
+{
+    .mensagem-principal
+    {
+        transform: translateY(40%);
+    }
+}
+
+@media screnn and (min-width: 470px)
+{
+    .hero::before
+    {
+        height: 9.4rem;
+        background: url("");
+        background-size: cover;
+    }
+
+    .testemunhos::before
+    {
+        height: 9.4rem;
+        background: url("");
+        background-size: cover;
+    }
+}
+
+
+@media screnn and (min-width: 700px)
+{
+    header
+    {
+        height: 8rem;
+    }
+
+    .nav-logotipo
+    {
+        width: 3.5rem;
+    }
+
+    .lista-nav
+    {
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+        flex-direction: row;
+        transition: initial;
+    }
+
+    .menu-icones
+    {
+        display: none;
+    }
+
+    .itens-nav
+    {
+        margin: 0 2.5rem;
+    }
+
+    .link-nav, .current
+    {
+        color: #fafafa;
+        position: relative;
+        font-size: 1.3rem;
+    }
+
+    .link-nav::before, .current::before
+    {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -.5rem;
+        background-color: #eb648c;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 650ms;
+    }
+
+    .current::before
+    {
+        transform: scaleX(1);
+    }
+
+    .link-nav:hover::before
+    {
+        transform: scaleX(1);
+    }
+
+    .hero
+    {
+        height: 60vh;
+    }
+
+    .mensagem-principal
+    {
+        transform: translateY(70%);
+    }
+
+    .titulo-cabecalho h1
+    {
+        font-size: 2.5rem;
+    }  
+}
+
+@media screnn and (min-width: 950px)
+{
+    .hero::before
+    {
+        height: 22.7rem;
+        background: url("");
+        background-size: cover;
+    }
+
+    .testemunhos::before
+    {
+        height: 22.7rem;
+        background: url("");
+        background-size: cover;
+    } 
+}
+
+@media screnn and (min-width: 1200px)
+{
+    .hero
+    {
+        height: 75vh;
+    }
+}
+
+  
+
+
+
+
+
+
+
+
+
